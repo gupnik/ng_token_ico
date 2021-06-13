@@ -66,4 +66,22 @@ contract("NGTokenSale", function (accounts) {
     }
     assert.equal(thrown, true);
   });
+
+  it("ends token sale", async function() {
+    tokenInstance = await NGToken.deployed();
+    tokenSaleInstance = await NGTokenSale.deployed();
+
+    thrown  = false; 
+    try {
+      await tokenSaleInstance.endSale({ from: buyer });
+    } catch (error) {
+      thrown = true;
+      assert(error.message.indexOf("revert") >= 0, "must be admin to end the sale");
+    }
+    assert.equal(thrown, true);
+
+    receipt = await tokenSaleInstance.endSale({ from: admin });
+    adminBalance = await tokenInstance.balanceOf(admin);
+    assert.equal(adminBalance.toNumber(), 999990, "returns all unsold tokens to admin");
+  });
 });
