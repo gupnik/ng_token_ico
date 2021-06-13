@@ -1,0 +1,25 @@
+{
+  "name": "ng_token_ico",
+  "version": "1.0.0",
+  "description": "NG Token ICO",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gupnik/ng_token_ico.git"
+  },
+  "author": "Nikhil Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gupnik/ng_token_ico/issues"
+  },
+  "homepage": "https://github.com/gupnik/ng_token_ico#readme",
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}

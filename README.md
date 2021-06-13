@@ -1,2 +1,2 @@
 # ng_token_ico
-Token ICO for NGToken.
+Token ICO for NGToken on Ethereum Ropsten Network.
